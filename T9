@@ -1,0 +1,7 @@
+
+if(keyPressed==true){
+   SpaceRacerY=SpaceRacerY-3;
+ }
+   if(keyPressed==false){
+   SpaceRacerY=SpaceRacerY+3;
+ }
