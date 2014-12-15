@@ -1,0 +1,3 @@
+if(SpaceRacerY=0){
+SpaceRacerY=600;
+}
