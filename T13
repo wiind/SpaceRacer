@@ -1,0 +1,15 @@
+int counter = time;
+int score = 0;
+
+void setup(){
+time = 0;
+score = +1
+
+void draw() 
+  if (time==60){
+  }
+  
+  if(time>60)
+ {
+  score = 0;
+ }
