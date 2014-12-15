@@ -1,2 +1,3 @@
 PImage img;
 img = loadImage("SpaceRacer.png");
+image(img,0,0);
