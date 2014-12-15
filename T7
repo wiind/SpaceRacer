@@ -1,0 +1,9 @@
+class Asteroid {
+//Global variables
+int x =0;
+int y = 0;
+float speedX = random(-1, 1);
+float speedY = random(-1, 1);
+boolean isAlive = true;
+PImage rock = loadImage("asteroid.png");
+
