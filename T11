@@ -1,0 +1,15 @@
+int x, y;
+void setup() {
+size(300,300);
+x=width/2;
+y=height/2;
+background(255);
+}
+
+void draw() {
+if(dist(
+fill(0);
+ellipse(x,y,100,100);
+}
+
+https://www.youtube.com/watch?v=QyvxYS1RATA
