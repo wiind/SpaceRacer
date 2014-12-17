@@ -1,0 +1,49 @@
+int x =0;
+int y = 0;
+int score=0;
+int x, y;
+int counter;
+
+void setup() {
+size(600,600);
+x=width/2;
+y=height/2;
+background(255);
+}
+
+void draw(){
+
+float speedX = random(-1, 1);
+float speedY = random(-1, 1);
+boolean isAlive = true;
+PImage rock = loadImage("asteroid.png");
+
+PImage img;
+img = loadImage("SpaceRacer.png");
+image(img,0,0);
+score = +1
+
+
+void draw() {
+if(dist(
+fill(0);
+ellipse(x,y,100,100);
+}
+
+if(keyPressed==true){
+   SpaceRacerY=SpaceRacerY-3;
+ }
+   if(keyPressed==false){
+   SpaceRacerY=SpaceRacerY+3;
+ }
+ 
+ if(SpaceRacerY=0){
+SpaceRacerY=600;
+}
+
+counter= counter+1;
+
+if(counter==180){
+counter=0;
+}
+}
