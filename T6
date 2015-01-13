@@ -2,7 +2,7 @@ PImage bg;
 
 void setup() {
   size(600,600);
-  bg=loadImage("dibujo.png");
+  bg=loadImage("space.png");
 }
 void draw(){
   background(bg);
