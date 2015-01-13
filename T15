@@ -4,7 +4,6 @@ int score=0;
 int shipX=300;
 int shipY=540;
 int counter;
-int score2;
 float speedX;
 float speedY;
 PImage ship;
@@ -22,7 +21,8 @@ void draw(){
   float speedY = random(-1, 1);
   image(ship,shipX,shipY,30,50);
   counter=counter+1;
-
+  text("score");
+  
 if(keyPressed==true){
    shipY=shipY-3;
  }
@@ -44,22 +44,4 @@ if(counter>1800){
   shipX=300;
   shipY=540;
 }
-}
-
-if(Yship1==0){
-score1= score1+1;
-}
-
-
-
-if(Yship2==0){
-score2= score2+1;
-}
-
-
-textSize(20);
-fill(0);
-text(score1, 240, 580);
-fill(255);
-text(score2, 350, 580);
 }
