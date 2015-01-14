@@ -7,21 +7,24 @@ int counter;
 float speedX;
 float speedY;
 PImage ship;
+PImage bg;
 
 void setup() {
   size(600,600);
   ship=loadImage("SpaceRacer.png");
+  bg=loadImage("space.png");
+
 }
 
 void draw(){
-  background(0);
-  fill(190,170,170);
-  ellipse(asteroidX,asteroidY,10,10);
+  background(bg);
   float speedX = random(-1, 1);
   float speedY = random(-1, 1);
   image(ship,shipX,shipY,30,50);
   counter=counter+1;
-  text("score");
+  fill(0);
+  textSize(50);
+  text(score,550,100);
   
 if(keyPressed==true){
    shipY=shipY-3;
