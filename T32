@@ -1,0 +1,117 @@
+int score=0;
+int shipX=300;
+int shipY=540;
+int counter;
+int asteroideX;
+int asteroideX1=600;
+int asteroideX2;
+int asteroideX3;
+int asteroideX4;
+int asteroideX5;
+int asteroideX6;
+int asteroideY;
+int asteroideY1;
+int asteroideY2;
+int asteroideY3;
+int asteroideY4;
+int asteroideY5;
+int asteroideY6;
+
+
+
+float speedX;
+float speedY;
+
+PImage ship;
+PImage bg;
+PImage asteroide;
+
+
+void setup() {
+  size(600,600);
+  ship=loadImage("SpaceRacer.png");
+  bg=loadImage("space.png");
+  asteroide=loadImage("asteroide.png");
+  asteroideY=int(random(0,600));
+  
+ 
+}
+
+void draw(){
+  background(bg);
+  float speedX = random(-1, 1);
+  float speedY = random(-1, 1);
+  image(ship,shipX,shipY,30,50);
+  counter=counter+1;
+  fill(0);
+  textSize(50);
+  text(score,550,100);
+  image(asteroide,asteroideX,asteroideY,30,30);
+  image(asteroide,asteroideX1,asteroideY1,30,30);
+  image(asteroide,asteroideX1,asteroideY2,30,30);
+  image(asteroide,asteroideX1,asteroideY3,30,30);
+  image(asteroide,asteroideX1,asteroideY4,30,30);
+  image(asteroide,asteroideX,asteroideY,30,30);
+  
+    asteroideX=asteroideX+4;
+  asteroideX1=asteroideX1-4;
+  
+if(keyPressed==true){
+   shipY=shipY-3;
+ }
+
+if((keyPressed==false)&&(shipY>540)){
+  shipY=shipY;
+}
+
+if(keyPressed==false){
+   shipY=shipY+3;
+ }
+  
+if(shipY==0){
+  score=score+1;
+  shipY=540;
+}
+
+if(counter>1800){
+  shipX=300;
+  shipY=540;
+}
+
+
+ if(asteroideX==600){
+    asteroideY=int(random(0,600));
+    asteroideY1=int(random(0,500));
+    asteroideY2=int(random(0,400));
+    asteroideY3=int(random(0,300));
+    asteroideY4=int(random(0,200));
+    asteroideX=0;
+  }
+  if(shipY>600){
+    shipY=600;
+  }
+  if(asteroideX1==0){
+    asteroideY3=int(random(0,600));
+    asteroideY2=int(random(0,600));
+    asteroideY4=int(random(0,600));
+    asteroideX1=600;
+  }
+   if(keyPressed==true && shipX>asteroideX-20 && shipX<asteroideX+20 && shipY>asteroideY5-20 && shipY<asteroideY5+20){
+    shipY=600;
+  }
+     if(keyPressed==true && shipX>asteroideX-20 && shipX<asteroideX+20 && shipY>asteroideY4-20 && shipY<asteroideY4+20){
+    shipY=600;
+  }
+  if(keyPressed==true && shipX>asteroideX-20 && shipX<asteroideX+20 && shipY>asteroideY3-20 && shipY<asteroideY3+20){
+    shipY=600;
+  }
+  if(keyPressed==true && shipX>asteroideX-20 && shipX<asteroideX+20 && shipY>asteroideY2-20 && shipY<asteroideY2+20){
+    shipY=600;
+  }
+  if(keyPressed==true && shipX>asteroideX-20 && shipX<asteroideX+20 && shipY>asteroideY-20 && shipY<asteroideY+20){
+    shipY=600;
+  }
+  if(keyPressed==true && shipX>asteroideX-20 && shipX<asteroideX+20 && shipY>asteroideY1-20 && shipY<asteroideY1+20){
+    shipY=600;
+  }
+}
